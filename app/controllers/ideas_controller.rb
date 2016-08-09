@@ -1,5 +1,11 @@
 class IdeasController < ApplicationController
   def new
-    @name ="Murat"
+
+  end
+
+  def index
+
+    @ideas = Idea.all
+
   end
 end

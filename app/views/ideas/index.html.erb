@@ -1,0 +1,12 @@
+Listing Ideas <br />
+
+  <%= @ideas.count %><br />
+
+
+  <% @ideas.each do |ideas| %>
+
+        ID: <%= ideas.id%>  Title:<%= ideas.title%>---Desc:<%= ideas.description%><br />
+
+
+  <%end%>
+
