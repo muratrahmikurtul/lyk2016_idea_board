@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160808135135) do
+ActiveRecord::Schema.define(version: 20160809081829) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20160808135135) do
   create_table "categories", force: :cascade do |t|
     t.string "title"
     t.string "desc"
+    t.index ["title"], name: "index_categories_on_title", unique: true, using: :btree
   end
 
   create_table "ideas", force: :cascade do |t|
