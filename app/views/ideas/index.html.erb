@@ -5,7 +5,7 @@ Listing Ideas <br />
 
   <% @ideas.each do |ideas| %>
 
-        ID: <%= ideas.id%>  Title:<%= ideas.title%>---Desc:<%= ideas.description%><br />
+        ID: <%= ideas.id%>  Title:<a href="/ideas/<%=ideas.id%>"><%= ideas.title%></a>---Desc:<%= ideas.description%><br />
 
 
   <%end%>
