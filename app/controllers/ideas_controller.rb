@@ -40,7 +40,10 @@ class IdeasController < ApplicationController
     @idea.destroy
     redirect_to ideas_path
   end
+
+  private
+
   def idea_params
-    params.permit(:title, :description, :planned_to)
+    params.require(:idea).permit(:title, :description, :planned_to)
   end
 end
