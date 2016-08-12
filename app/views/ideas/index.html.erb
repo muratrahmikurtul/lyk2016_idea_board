@@ -3,6 +3,10 @@ Listing Ideas <br />
   <%= @ideas.count %><br />
 
   <% @ideas.each do |ideas| %>
-       ID: <%= ideas.id%>  Title:<a href="<%=idea_path(ideas.id)%>"><%= ideas.title%></a>---Desc:<%= ideas.description%><br />
+       ID: <%= ideas.id%>
+       Title:
+       <%= link_to (ideas.title), idea_path(ideas) %>
+       Desc:<%= ideas.description%><br />
   <%end%>
 
+<%= link_to (name="New Idea"), ideas_new_path %>

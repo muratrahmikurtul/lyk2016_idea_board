@@ -5,4 +5,5 @@ Display Idea
   <%= @idea.title %> <br />
   <%= @idea.description %> <br />
 
-<a href="/ideas">Back To Idea List</a>
+<%= link_to "Back to Ideas List", ideas_path %><br />
+<%= link_to  "Edit idea", edit_idea_path(@idea) %>
