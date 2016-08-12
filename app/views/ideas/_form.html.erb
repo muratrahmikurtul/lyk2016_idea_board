@@ -3,5 +3,5 @@ Description:<textarea name="description" rows="8" cols="40">
     <%= @idea.description %>
   </textarea><br />
 Planned_To:<input type="text" name="planned_to" value="<%= @idea.planned_to %>"><br />
-<input type="hidden" name="authenticity_token" value="form_authenticity_token">
+<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
 <button type="submit">Submit</button>

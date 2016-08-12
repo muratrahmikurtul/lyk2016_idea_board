@@ -6,4 +6,5 @@ Display Idea
   <%= @idea.description %> <br />
 
 <%= link_to "Back to Ideas List", ideas_path %><br />
-<%= link_to  "Edit idea", edit_idea_path(@idea) %>
+<%= link_to  "Edit idea", edit_idea_path(@idea) %><br />
+<%= link_to  "Delete idea", idea_path(@idea) , method: :delete%>

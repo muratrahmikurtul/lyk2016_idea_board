@@ -35,7 +35,11 @@ class IdeasController < ApplicationController
     end
   end
 
- 
+  def destroy
+    @idea = Idea.find(params[:id])
+    @idea.destroy
+    redirect_to ideas_path
+  end
   def idea_params
     params.permit(:title, :description, :planned_to)
   end
