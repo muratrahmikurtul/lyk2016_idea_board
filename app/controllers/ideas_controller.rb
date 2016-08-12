@@ -1,7 +1,6 @@
 class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :update, :edit, :destroy]
 
-
   def new
     @idea=Idea.new
   end
@@ -17,6 +16,7 @@ class IdeasController < ApplicationController
     @idea = Idea.new(idea_params)
 
     if @idea.save
+      flash[:success] = 'Islem basariyla tamamlandi.'
       redirect_to idea_path(@idea)
     else
       render :new
