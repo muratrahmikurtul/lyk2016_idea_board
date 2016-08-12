@@ -1,4 +1,7 @@
 class IdeasController < ApplicationController
+  before_action :set_idea, only: [:show, :update, :edit, :destroy]
+
+
   def new
     @idea=Idea.new
   end
@@ -8,7 +11,6 @@ class IdeasController < ApplicationController
   end
 
   def show
-    @idea = Idea.find(params[:id])
   end
 
   def create
@@ -22,12 +24,9 @@ class IdeasController < ApplicationController
   end
 
   def edit
-    @idea = Idea.find(params[:id])
   end
 
   def update
-    @idea = Idea.find(params[:id])
-
     if @idea.update(idea_params)
       redirect_to idea_path(@idea)
     else
@@ -36,12 +35,16 @@ class IdeasController < ApplicationController
   end
 
   def destroy
-    @idea = Idea.find(params[:id])
+
     @idea.destroy
     redirect_to ideas_path
   end
 
   private
+
+  def set_idea
+    @idea = Idea.find(params[:id])
+  end
 
   def idea_params
     params.require(:idea).permit(:title, :description, :planned_to)
