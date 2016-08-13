@@ -6,6 +6,8 @@
     <%= f.text_area :description, placeholder: 'description',rows: 10  %><br />
     <%= f.label :planned_to%>
     <%= f.date_field :planned_to, placeholder: 'planned_to'%><br />
+    <%= f.select :category_id, @categories %><br />
     <%= f.submit 'Gonder'%>
+
 
 <%end%>

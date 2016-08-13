@@ -6,6 +6,8 @@
       <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfe3dfeedfefdfebdff5dfe8dfe5dfebdff8dfeedff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
     </data-source>
     <data-source name="Rails idea_board: test" uuid="c682669d-5685-4d27-8ab2-aec59caf69b9" />
-    <data-source name="Rails idea_board: development" uuid="0f1eed27-8aa1-4d9c-8f32-a5c3bcd1f048" />
+    <data-source name="Rails idea_board: development" uuid="0f1eed27-8aa1-4d9c-8f32-a5c3bcd1f048">
+      <user-name>root</user-name>
+    </data-source>
   </component>
 </project>
