@@ -1,0 +1,8 @@
+<h1><%= @category.title %></h1>
+
+<% @category.ideas.each do |idea| %>
+    ID: <%= idea.id%><br>
+    Title:
+    <%= link_to (idea.title), idea_path(idea) %><br>
+    Desc:<%= idea.description%><br>
+<%end%>

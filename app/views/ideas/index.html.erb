@@ -6,7 +6,8 @@ Listing Ideas <br />
        ID: <%= ideas.id%>
        Title:
        <%= link_to (ideas.title), idea_path(ideas) %>
-       Desc:<%= ideas.description%><br />
+       Desc:<%= ideas.description%>
+       <%= link_to  "Delete idea", idea_path(ideas) , method: :delete%><br />
   <%end%>
 
 <%= link_to "New Idea", new_idea_path %>

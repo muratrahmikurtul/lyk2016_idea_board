@@ -7,4 +7,6 @@ class Idea < ApplicationRecord
       errors.add(:planned_to, "Geçmişte bir tarih olamaz")
     end
   end
+
+  belongs_to :category
 end

@@ -2,10 +2,11 @@
 Display Idea
 
 
-  <%= @idea.id %> <br />
-  <%= @idea.title %> <br />
-  <%= @idea.description %> <br />
-  
+  ID: <%= @idea.id %> <br />
+  Title: <%= @idea.title %> <br />
+  Desc: <%= @idea.description %> <br />
+  Category: <%= @idea.category.title %><br />
+
 
 <%= link_to "Back to Ideas List", ideas_path %><br />
 <%= link_to  "Edit idea", edit_idea_path(@idea) %><br />
